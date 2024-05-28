@@ -7,44 +7,163 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <nav id="navbar">
+      <header>CSS Gradients</header>
+      <ul>
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li>
+          <a href="#linear_gradient" class="nav-link">Linear Gradient</a>
+        </li>
+        <li><a href="#radial_gradient" class="nav-link">Radial Gradient</a></li>
+        <li><a href="#conic_gradient" class="nav-link">Conic Gradient</a></li>
+        <li>
+          <a href="#repeating_gradients" class="nav-link"
+            >Repeating Gradients</a
+          >
+        </li>
+        <li><a href="#reference" class="nav-link">Reference</a></li>
+      </ul>
+    </nav>
     <main id="main-doc">
-      <h1>Knit Socks like a Coder</h1>
-      <navbar>
-        <a href="#introduction">Introduction</a>
-        <a href="#materials">Materials</a>
-        <a href="#pattern">Pattern</a>
-        <a href="#cuff">Cuff</a>
-        <a href="#heel">Heel</a>
-        <a href="#foot">Foot</a>
-        <a href="#toecap">Toecap</a>
-      </navbar>
       <section class="main-section" id="introduction">
         <header>Introduction</header>
         <p>
-          Sock pattern by Erica Lueder. The pattern can be found with the normal
-          style of knitting instructions on
-          <a
-            href="https://www.ravelry.com/patterns/library/hermiones-everyday-socks"
-            >Ravelry</a
-          >
-          or Erica's
-          <a
-            href="https://dreamsinfiber.blogspot.com/2009/07/hermoines-everyday-socks-free-pattern.html"
-            >blog.</a
-          >
+          The gradient CSS data type is a special type of image that consists of
+          a progressive transition between two or more colors.
         </p>
       </section>
-      <section class="main-section" id="materials">
-        <header>Materials</header>
+      <section class="main-section" id="linear_gradient">
+        <header>Linear Gradient</header>
+        <p>
+          Linear gradients transition colors progressively along an imaginary
+          line. They are generated with the linear-gradient() function.
+        </p>
+        <pre><code>.linear-gradient {
+      background: linear-gradient(
+            to bottom,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            indigo,
+            violet
+          );
+        }</code></pre>
+        <div class="linear-gradient box"></div>
       </section>
-      <section class="main-section" id="pattern">
-        <header>Pattern</header>
+      <section class="main-section" id="radial_gradient">
+        <header>Radial Gradient</header>
+        <p>
+          Radial gradients transition colors progressively from a center point
+          (origin). They are generated with the radial-gradient() function.
+        </p>
+        <pre><code>.radial-gradient {
+      background: radial-gradient(
+              pink, 
+              darkgoldenrod, 
+              seagreen);
+          }</code></pre>
+        <div class="radial-gradient box"></div>
       </section>
-      <section class="main-section" id="cuff"><header>Cuff</header></section>
-      <section class="main-section" id="heel"><header>Heel</header></section>
-      <section class="main-section" id="foot"><header>Foot</header></section>
-      <section class="main-section" id="toecap">
-        <header>Toecap</header>
+      <section class="main-section" id="conic_gradient">
+        <header>Conic Gradient</header>
+        <p>
+          Conic gradients transition colors progressively around a circle. They
+          are generated with the conic-gradient() function.
+        </p>
+        <pre><code>.conic-gradient {
+      background: conic-gradient(
+              violet, 
+              indigo, 
+              turquoise, 
+              indigo);
+          }</code></pre>
+        <div class="conic-gradient box"></div>
+      </section>
+      <section class="main-section" id="repeating_gradients">
+        <header>Repeating Gradients</header>
+        <p>
+          Repeating gradients duplicate a gradient as much as necessary to fill
+          a given area.
+        </p>
+        <ul id="repeating-gradients-list">
+          <li>
+            <h2>Repeating Linear Gradient</h2>
+            <p>
+              For a repeating linear gradient, the function
+              repeating-linear-gradient() is used.
+            </p>
+            <pre><code>.repeating-linear-gradient { 
+      background: repeating-linear-gradient( 
+                  to top right, 
+                  darkgoldenrod,
+                  darkgoldenrod 5px, 
+                  pink 5px, 
+                  pink 10px ); 
+                }</code></pre>
+            <div class="repeating-linear-gradient box"></div>
+          </li>
+          <li>
+            <h2>Repeating Radial Gradient</h2>
+            <p>
+              Repeating gradients duplicate a gradient as much as necessary to
+              fill a given area. For a repeating radial gradient, the function
+              repeating_radial_gradient()is used.
+            </p>
+            <pre><code>.repeating-radial-gradient {
+      background: repeating-radial-gradient(
+                  indigo,
+                  indigo 15px,
+                  white 15px,
+                  white 30px
+                );
+              }</code></pre>
+            <div class="repeating-radial-gradient box"></div>
+          </li>
+          <li>
+            <h2>Repeating Conic Gradient</h2>
+            <p>
+              Repeating gradients duplicate a gradient as much as necessary to
+              fill a given area. For a repeating conic gradient, the function
+              repeating_conic_gradient() is used.
+            </p>
+            <pre><code>.repeating-conic-gradient {
+      background: repeating-conic-gradient(
+                seagreen, pink 20deg);
+            }</code></pre>
+            <div class="repeating-conic-gradient box"></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="reference">
+        <header>Reference</header>
+        <p>
+          This documentation for gradients was adapted from
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient"
+            >MDN</a
+          >, where you can find more examples of the syntax.
+        </p>
+        <p>Additional material can be found here:</p>
+        <ul id="additional-links">
+          <li>
+            <a href="https://css-tricks.com/a-complete-guide-to-css-gradients/"
+              >A complete guide to CSS gradients</a
+            >
+          </li>
+          <li>
+            <a href="https://cssgradient.io/"
+              >CSS gradient background creator</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients"
+              >MDN: Using CSS gradients</a
+            >
+          </li>
+        </ul>
       </section>
     </main>
   </body>

@@ -2,8 +2,144 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: red;
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar li {
+  border-top: 1px solid indigo;
+  padding: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #111111;
+}
+
+a:hover {
+  cursor: pointer;
+  color: darkcyan;
+}
+
+#navbar header {
+  color: indigo;
+  padding: 8px;
+  font-weight: 700;
+}
+
+code {
+  background-color: rgb(201, 215, 216);
+  padding: 2px;
+  margin: 16px 8px;
+  display: block;
+  width: 90%;
+  max-width: 600px;
+  word-wrap: normal;
+  word-break: normal;
+  white-space: pre-wrap;
+}
+
+.main-section header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 16px 8px;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  margin: 16px 8px;
+  border: 2px solid #111111;
+}
+
+.linear-gradient {
+  background: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+.radial-gradient {
+  background: radial-gradient(pink, darkgoldenrod, seagreen);
+}
+
+.conic-gradient {
+  background: conic-gradient(violet, indigo, turquoise, indigo);
+}
+
+.repeating-linear-gradient {
+  background: repeating-linear-gradient(
+    to top right,
+    darkgoldenrod,
+    darkgoldenrod 5px,
+    pink 5px,
+    pink 10px
+  );
+}
+
+.repeating-radial-gradient {
+  background: repeating-radial-gradient(
+    indigo,
+    indigo 15px,
+    white 15px,
+    white 30px
+  );
+}
+
+.repeating-conic-gradient {
+  background: repeating-conic-gradient(seagreen, pink 20deg);
+}
+
+#repeating-gradients-list {
+  list-style: none;
+}
+
+#repeating-gradients-list h2 {
+  font-size: 1.2rem;
+  padding: 8px;
+}
+#additional-links li {
+  margin: 4px 0 4px 16px;
+}
+
+#additional-links a {
+  color: indigo;
+  text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+  }
+
+  #main-doc {
+    padding: 20px;
+    margin: 0 0 0 200px;
+    border-left: 2px solid indigo;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  #main-doc {
+    padding: 20px;
+  }
 }
